@@ -21,13 +21,13 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Информация по установке проекта
+## В»РЅС„РѕСЂРјР°С†РёВ¤ РїРѕ СѓСЃС‚Р°РЅРѕРІРєРµ РїСЂРѕРµРєС‚Р°
 - cd domains
 - git clone https://github.com/Lanchik13/dobrosfera.git
 - cd dobrosfera
 - composer self-update
 - composer install
-- скопировать .env.example и превратить его в .env
+- СЃРєРѕРїРёСЂРѕРІР°С‚СЊ .env.example Рё РїСЂРµРІСЂР°С‚РёС‚СЊ РµРіРѕ РІ .env
 
 
 ## License
