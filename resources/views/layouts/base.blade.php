@@ -15,12 +15,12 @@
 	<h1 id="logotext">Добросфера</h1>
   </div>
   <nav class="topmenu">
-   <a href="#">Главная</a>
+   <a href="{{asset('main')}}">Главная</a>
    <a href="#">Каталог</a>
    <a href="#">Галерея</a>
    <a href="#">Новости</a>
    <a href="#">Полинор</a>
-   <a href="#">Контакты</a>
+   <a href="{{asset('contact')}}">Контакты</a>
   </nav>
   <div id="body">
    <div class="con">

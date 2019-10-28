@@ -1,9 +1,12 @@
 @extends('layouts.base')
 
 @section('content')
-<h2> {{$url}}</h2>
+<h2> {{isset($obj->name)?$obj->name:'404'}}</h2>
 <div>
-	текст
+{!! $obj->small_body !!}
+</div>
+<div>
+{!! $obj->body !!}
 </div>
 
 @endsection
