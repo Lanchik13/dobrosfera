@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Ноя 13 2019 г., 21:35
+-- Время создания: Ноя 25 2019 г., 21:17
 -- Версия сервера: 8.0.12
 -- Версия PHP: 7.2.10
 
@@ -34,6 +34,15 @@ CREATE TABLE `categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Категорийка1', NULL, NULL),
+(2, 'Категорийка2 другое', NULL, NULL),
+(3, 'Категория все остальное', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -138,7 +147,16 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `price`, `body`, `small_body`, `showhide`, `category_id`, `picture`, `user_id`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'kjkl', NULL, 'jjklj', NULL, '1', NULL, NULL, NULL, NULL, '2019-11-13 14:41:28', '2019-11-13 14:41:28'),
-(2, 'jh', NULL, 'ffff', NULL, '1', NULL, NULL, NULL, NULL, '2019-11-13 14:50:17', '2019-11-13 14:50:17');
+(2, 'jh', NULL, 'ffff', NULL, '1', NULL, NULL, NULL, NULL, '2019-11-13 14:50:17', '2019-11-13 14:50:17'),
+(3, NULL, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, '2019-11-18 17:50:49', '2019-11-18 17:50:49'),
+(4, 'Svet', NULL, '45', NULL, '1', NULL, NULL, NULL, NULL, '2019-11-18 17:51:39', '2019-11-18 17:51:39'),
+(5, '100', NULL, 'jkkll', NULL, '1', NULL, NULL, NULL, NULL, '2019-11-18 17:53:43', '2019-11-18 17:53:43'),
+(6, 'gg', NULL, 'fff', NULL, '1', NULL, '19_11_18_09_10_59.jpg', NULL, NULL, '2019-11-18 18:10:59', '2019-11-18 18:10:59'),
+(7, '777', NULL, 'hhh', NULL, '1', NULL, '19_11_18_09_11_17.jpg', NULL, NULL, '2019-11-18 18:11:17', '2019-11-18 18:11:17'),
+(8, '300', NULL, 'описание', NULL, '1', NULL, '19_11_25_08_18_28.jpg', NULL, NULL, '2019-11-25 17:18:37', '2019-11-25 17:18:37'),
+(9, '30', NULL, NULL, NULL, '1', NULL, '', 1, NULL, '2019-11-25 17:22:41', '2019-11-25 17:22:41'),
+(10, '9002', NULL, NULL, NULL, '1', NULL, '19_11_25_08_27_12.jpg', 1, NULL, '2019-11-25 17:27:12', '2019-11-25 17:27:12'),
+(11, 'товар', '900', NULL, NULL, '1', NULL, '19_11_25_08_35_17.jpg', 1, NULL, '2019-11-25 17:35:18', '2019-11-25 17:35:18');
 
 -- --------------------------------------------------------
 
@@ -162,7 +180,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Svet', 'lanchik13@yandex.ru', NULL, '$2y$10$ceD7uOZmWJlRkQME8Xor4.Hru0H3bwzIc8qlyzGzNsedTbmrGlKbC', NULL, '2019-10-21 13:40:08', '2019-10-21 13:40:08');
+(1, 'Svet', 'lanchik13@yandex.ru', NULL, '$2y$10$ceD7uOZmWJlRkQME8Xor4.Hru0H3bwzIc8qlyzGzNsedTbmrGlKbC', '32gSNzKAYKLeXyfGzcf1mQhnXKJALxM2shKUaSwhplAVTCtTNBVETKnjiWRg', '2019-10-21 13:40:08', '2019-10-21 13:40:08');
 
 --
 -- Индексы сохранённых таблиц
@@ -219,7 +237,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `failed_jobs`
@@ -243,7 +261,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
