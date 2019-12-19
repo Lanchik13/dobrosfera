@@ -21,8 +21,8 @@
   @enderror
   
    <div class="form-group"> 
-   <label for="categories">Категория</label>
-  	<select class="custom-select" name="categories" required>
+   <label for="category_id">Категория</label>
+  	<select class="custom-select" name="category_id" required>
 		<option value="">Выберите категорию</option>
 		@foreach ($cats as $one)
 		<option value="{{$one->id}}">{{$one->name}}</option>
