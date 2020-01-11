@@ -17,8 +17,31 @@
     <a href="/"><img id="logo" src="{{asset('media/img/logo_house.png')}}" /></a>
 	<h1 id="logotext">Добросфера</h1>
   </div>
+  <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <img id="imgNavSel" src="{{(isset($_COOKIE['lang']))?'/lang/'.$_COOKIE['lang'].'.jpg':'ru.jpg'}}" alt="..." class="img-thumbnail icon-small" />&nbsp;&nbsp;
+                            <span id="lanNavSel">
+						
+							{{(isset($_COOKIE['lang']))?$_COOKIE['lang']:'ru'}}
+							
+							</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu mumu" role="menu">
+                            <li><a id="navFra" href="/?lang=fr" class="language">
+                                    <img id="imgNavFra" src="{{asset('lang/fr.jpg')}}" alt="France" class="img-thumbnail icon-small">&nbsp;
+                                    <span id="lanNavFra">Française</span>&nbsp;
+                                </a></li>
+                            <li><a id="navEng" href="/?lang=en" class="language">
+                                    <img id="imgNavEng" src="{{asset('lang/en.jpg')}}" alt="English" class="img-thumbnail icon-small">&nbsp;
+                                    <span id="lanNavEng">English</span>&nbsp;
+                                </a></li>
+                            <li><a id="navRus" href="/?lang=ru" class="language">
+                                    <img id="imgNavRus" src="{{asset('lang/ru.jpg')}}" alt="Russia" class="img-thumbnail icon-small">&nbsp;
+                                    <span id="lanNavRus">Русский</span>&nbsp;
+                                </a></li>
+                        </ul>
+                    </li>
   <nav class="topmenu">
-   <a href="{{asset('main')}}">Главная</a>
+   <a href="{{asset('main')}}">@lang('base.main')</a>
    <a href="#">Каталог</a>
    <a href="#">Галерея</a>
    <a href="#">Новости</a>
